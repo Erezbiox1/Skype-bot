@@ -54,7 +54,7 @@ Config
 
 > The **Name** is the name of the skype guest.       
 
-> The **ChatID** is the ID of the chat, [You will have to get it manually using a custom bot.<](https://github.com/Erezbiox1/SkypeChatID)  
+> The **ChatID** is the ID of the chat, [You will have to get it manually using a custom bot.](https://github.com/Erezbiox1/SkypeChatID)  
 
 > The **CommandMark** is the mark that makes a message a command.    
 
