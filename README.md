@@ -23,9 +23,13 @@ after that, make a constructor for that class with the command name.
     }
 
 > The **Sender** is the user who did the command.
+
 > The **Command** is the registerd command.
+
 > The **Label** is the name of the command, the first word.
-> The **Args** is the arguments of the command, not including the command itself. 
+
+> The **Args** is the arguments of the command, not including the command itself.
+
 
 After that, you want to register the command, add the command class to the list in the commands class:
 
