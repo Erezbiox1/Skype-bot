@@ -48,7 +48,7 @@ Config
 -------------
 
     public static final String name = "BioBot";
-    public static final String chatID =         "19:d48567e4caa94de488ed0913e7313d28@thread.skype";
+    public static final String chatID = "19:d48567e4caa94de488ed0913e7313d28@thread.skype";
     public static final String commandMark = "!";
     public static final String password = "Pizza123";
 
