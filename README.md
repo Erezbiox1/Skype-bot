@@ -52,10 +52,13 @@ Config
     public static final String commandMark = "!";
     public static final String password = "Pizza123";
 
-> The **Name** is the name of the skype guest.
-> The **ChatID** is the ID of the chat, You will have to get it manually using a custom bot.
-> The **CommandMark** is the mark that makes a message a command.
-> The **Password** is the password that the user have to enter to perform special commands, like !stop
+> The **Name** is the name of the skype guest.       
+
+> The **ChatID** is the ID of the chat, <a herf="https://github.com/Erezbiox1/SkypeChatID">You will have to get it manually using a custom bot.</a>      
+
+> The **CommandMark** is the mark that makes a message a command.    
+
+> The **Password** is the password that the user have to enter to perform special commands, like !stop    
 
 Admins
 -------------
