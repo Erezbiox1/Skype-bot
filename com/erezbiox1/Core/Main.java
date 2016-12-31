@@ -7,6 +7,7 @@ import com.samczsun.skype4j.chat.Chat;
 import com.samczsun.skype4j.events.EventDispatcher;
 import com.samczsun.skype4j.internal.Endpoints;
 
+import java.awt.*;
 import java.util.Scanner;
 
 /**
@@ -54,12 +55,13 @@ public class Main {
 
 
         System.out.println("Sending Test Message...");
-        Utils.sendMessage("Hello world, Please enter !help to view commands.");
+        Utils.sendMessage("Hello world, Please enter !help to view commands.", Color.RED);
+
 
         System.out.println("Bot is online, Waiting... \n");
 
         while(true){
-            Utils.sendMessage(new Scanner(System.in).nextLine());
+            Utils.sendMessage(new Scanner(System.in).nextLine(), Color.BLUE);
         }
     }
 

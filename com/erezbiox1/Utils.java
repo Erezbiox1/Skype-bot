@@ -3,7 +3,11 @@ package com.erezbiox1;
 import com.erezbiox1.Core.Main;
 import com.samczsun.skype4j.chat.Chat;
 import com.samczsun.skype4j.exceptions.ConnectionException;
+import com.samczsun.skype4j.formatting.Message;
+import com.samczsun.skype4j.formatting.RichText;
+import com.samczsun.skype4j.formatting.Text;
 
+import java.awt.*;
 import java.util.Random;
 
 /**
@@ -25,6 +29,18 @@ public class Utils {
         } catch (ConnectionException e) {
             System.out.println("No connection to the server.");
         }
+    }
+
+    public static void sendMessage(Message message){
+        try {
+            Main.chat.sendMessage(message);
+        } catch (ConnectionException e) {
+            System.out.println("No connection to the server");
+        }
+    }
+
+    public static void sendMessage(String message, Color color){
+        sendMessage(Message.create().with(Text.rich(message).withColor(color)));
     }
 
     public static int randInt(int min, int max) {
