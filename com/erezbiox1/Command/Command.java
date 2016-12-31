@@ -1,5 +1,6 @@
 package com.erezbiox1.Command;
 
+import com.samczsun.skype4j.chat.Chat;
 import com.samczsun.skype4j.participants.Participant;
 
 /**

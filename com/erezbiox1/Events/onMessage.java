@@ -24,17 +24,20 @@ public class onMessage implements Listener {
 
         if(message.startsWith(prefix)){
 
+            System.out.println("Message recived:");
+            System.out.println(event.getMessage().getSender().getDisplayName() + ": " + event.getMessage().getContent().asPlaintext());
+
             if(!message.contains(" ")){
 
                 Command command = commandManager.getCommand(message.replace(prefix, "").toLowerCase());
 
                 if(command == null){
 
-                    Utils.sendMessage("Unknown Message. Type !help for a list of commands.");
+                    Utils.sendMessage("Unknown Command. Type !help for a list of commands.");
 
                 }else{
 
-                    command.onCommand(event.getMessage().getSender(), command, command.getName() ,new String[0]);
+                    command.onCommand(event.getMessage().getSender(), command, command.getName(), new String[0]);
 
                 }
 
@@ -45,7 +48,7 @@ public class onMessage implements Listener {
 
                 if(command == null){
 
-                    Utils.sendMessage("Unknown Message. Type !help for a list of commands.");
+                    Utils.sendMessage("Unknown Command. Type !help for a list of commands.");
 
                 }else{
 

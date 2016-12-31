@@ -4,6 +4,7 @@ import com.erezbiox1.Command.Command;
 import com.erezbiox1.Core.Admin;
 import com.erezbiox1.Core.Main;
 import com.erezbiox1.Utils;
+import com.samczsun.skype4j.chat.Chat;
 import com.samczsun.skype4j.participants.Participant;
 
 import java.util.Objects;

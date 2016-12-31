@@ -7,6 +7,8 @@ import com.samczsun.skype4j.chat.Chat;
 import com.samczsun.skype4j.events.EventDispatcher;
 import com.samczsun.skype4j.internal.Endpoints;
 
+import java.util.Scanner;
+
 /**
  * Created by Erezbiox1 on 27/12/2016.
  * (C) 2016 Erez Rotem All Rights Reserved.
@@ -21,11 +23,10 @@ public class Main {
 
     //Initializing Config Vars
     public static final String name = "BioBot";
-    //Pizza: 19:d48567e4caa94de488ed0913e7313d28@thread.skype
-    //Amit: 19:eb78aa5845584daa9a3d142c46e117dc@thread.skype
     public static final String chatID = "19:d48567e4caa94de488ed0913e7313d28@thread.skype";
     public static final String commandMark = "!";
-    public static final String password = "Pizza123";
+    public static final boolean randomPassword = true;
+    public static String password = "Pizza123";
 
     public static void main(String[] args){
         System.out.println("Building...");
@@ -41,13 +42,29 @@ public class Main {
         dispatcher = skype.getEventDispatcher();
         Events.registerEvents();
 
+        System.out.println("Generating password...");
+        generatePassword();
+
+        System.out.println("Password: " + password);
+
         System.out.println("Registering Commands...");
         commandManager = new CommandManager();
         Commands.registerEvents();
 
+
+
         System.out.println("Sending Test Message...");
         Utils.sendMessage("Hello world, Please enter !help to view commands.");
 
-        System.out.println("Bot is online, Waiting...");
+        System.out.println("Bot is online, Waiting... \n");
+
+        while(true){
+            Utils.sendMessage(new Scanner(System.in).nextLine());
+        }
+    }
+
+    public static void generatePassword(){
+        if(randomPassword)
+            password = Utils.randomPassword(8);
     }
 }
