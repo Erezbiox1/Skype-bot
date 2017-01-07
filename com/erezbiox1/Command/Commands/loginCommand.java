@@ -22,6 +22,11 @@ public class loginCommand extends Command{
 
     @Override
     public void onCommand(Participant sender, Command command, String Label, String[] args) {
+        if(Admin.isAdmin(sender)){
+            Utils.sendMessage("You are already an admin.");
+            return;
+        }
+
         if(args == null || args.length != 1){
             Utils.sendMessage("Invalid Arguments");
             return;
