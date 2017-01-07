@@ -22,7 +22,8 @@ public class Commands {
                     new stopCommand(),
                     new pingCommand(),
                     new bananaCommand(),
-                    new loginCommand()
+                    new loginCommand(),
+                    new echoCommand()
             )
     );
 

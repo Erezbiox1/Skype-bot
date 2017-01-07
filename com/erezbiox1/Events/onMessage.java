@@ -2,6 +2,7 @@ package com.erezbiox1.Events;
 
 import com.erezbiox1.Command.Command;
 import com.erezbiox1.Command.CommandManager;
+import com.erezbiox1.Command.Commands.echoCommand;
 import com.erezbiox1.Core.Main;
 import com.erezbiox1.Utils;
 import com.samczsun.skype4j.events.EventHandler;
@@ -14,6 +15,8 @@ import com.samczsun.skype4j.exceptions.ConnectionException;
  * (C) 2016 Erez Rotem All Rights Reserved.
  */
 public class onMessage implements Listener {
+
+    //TODO - recode the entire class. ITS A MESS
 
     @EventHandler
     public void MessageReceivedEvent(MessageReceivedEvent event){
@@ -59,6 +62,8 @@ public class onMessage implements Listener {
 
             }
 
+        }else if (echoCommand.echo){
+            Utils.sendMessage(message);
         }
     }
 

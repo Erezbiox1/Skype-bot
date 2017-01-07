@@ -5,6 +5,8 @@ import com.erezbiox1.Utils;
 import com.samczsun.skype4j.Skype;
 import com.samczsun.skype4j.chat.Chat;
 import com.samczsun.skype4j.events.EventDispatcher;
+import com.samczsun.skype4j.formatting.Message;
+import com.samczsun.skype4j.formatting.Text;
 import com.samczsun.skype4j.internal.Endpoints;
 
 import java.awt.*;
@@ -24,7 +26,9 @@ public class Main {
 
     //Initializing Config Vars
     public static final String name = "BioBot";
-    public static final String chatID = "19:d48567e4caa94de488ed0913e7313d28@thread.skype";
+    //public static final String chatID = "19:d48567e4caa94de488ed0913e7313d28@thread.skype";
+    //public static final String chatID = "19:f272b9d0864f48a0a5443a93c414bcde@thread.skype";
+    public static final String chatID = "19:8e82590257fd401b94f13a03ea6ff1c5@thread.skype";
     public static final String commandMark = "!";
     public static final boolean randomPassword = true;
     public static String password = "Pizza123";
@@ -52,11 +56,8 @@ public class Main {
         commandManager = new CommandManager();
         Commands.registerEvents();
 
-
-
         System.out.println("Sending Test Message...");
         Utils.sendMessage("Hello world, Please enter !help to view commands.", Color.RED);
-
 
         System.out.println("Bot is online, Waiting... \n");
 
