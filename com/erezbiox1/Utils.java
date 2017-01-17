@@ -6,8 +6,10 @@ import com.samczsun.skype4j.exceptions.ConnectionException;
 import com.samczsun.skype4j.formatting.Message;
 import com.samczsun.skype4j.formatting.RichText;
 import com.samczsun.skype4j.formatting.Text;
+import com.samczsun.skype4j.participants.Participant;
 
 import java.awt.*;
+import java.util.Collection;
 import java.util.Random;
 
 /**
@@ -65,6 +67,34 @@ public class Utils {
         return result;
     }
 
+    public static boolean isNumeric(String str)
+    {
+        try
+        {
+            double d = Double.parseDouble(str);
+        }
+        catch(NumberFormatException nfe)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public static String getRandomUserName(Collection users) {
+        Random rnd = new Random();
+        String user = "No one";
+        boolean noName = true;
+
+        while(noName) {
+            int i = rnd.nextInt(users.size());
+            user = ((Participant) users.toArray()[i]).getDisplayName();
+
+            if (!user.equals(Main.name))
+                noName = false;
+        }
+
+        return user;
+    }
 
     public static void logout(){
         System.out.println("Shutting down...");

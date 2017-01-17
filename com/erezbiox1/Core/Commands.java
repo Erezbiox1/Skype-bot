@@ -24,7 +24,10 @@ public class Commands {
                     new bananaCommand(),
                     new loginCommand(),
                     new echoCommand(),
-                    new adminsCommand()
+                    new adminsCommand(),
+                    new shaharCommand(),
+                    new randomCommand(),
+                    new lotteryCommand()
             )
     );
 
