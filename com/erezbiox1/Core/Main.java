@@ -1,6 +1,7 @@
 package com.erezbiox1.Core;
 
 import com.erezbiox1.Command.CommandManager;
+import com.erezbiox1.Command.Commands.helpCommand;
 import com.erezbiox1.Utils;
 import com.samczsun.skype4j.Skype;
 import com.samczsun.skype4j.chat.Chat;
@@ -28,7 +29,8 @@ public class Main {
     public static final String name = "BioBot";
     //public static final String chatID = "19:d48567e4caa94de488ed0913e7313d28@thread.skype";
     //public static final String chatID = "19:f272b9d0864f48a0a5443a93c414bcde@thread.skype";
-    public static final String chatID = "19:8e82590257fd401b94f13a03ea6ff1c5@thread.skype";
+    //public static final String chatID = "19:8e82590257fd401b94f13a03ea6ff1c5@thread.skype";
+    public static final String chatID = "19:a7aa65a9d23748928e2301c81d0fa81c@thread.skype";
     public static final String commandMark = "!";
     public static final boolean randomPassword = true;
     public static String password = "Pizza123";
@@ -55,6 +57,8 @@ public class Main {
         System.out.println("Registering Commands...");
         commandManager = new CommandManager();
         Commands.registerEvents();
+
+        helpCommand.init(commandManager);
 
         System.out.println("Sending Test Message...");
         Utils.sendMessage("Hello world, Please enter !help to view commands.", Color.RED);

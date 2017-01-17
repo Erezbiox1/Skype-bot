@@ -12,7 +12,6 @@ import com.samczsun.skype4j.participants.Participant;
  */
 public class stopCommand extends Command {
 
-
     public stopCommand() {
         super("stop");
     }

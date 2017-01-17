@@ -1,6 +1,8 @@
 package com.erezbiox1.Command;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,6 +23,19 @@ public class CommandManager {
 
     public Command getCommand(String name){
         return commands.get(name);
+    }
+
+    public Map<String, Command> getCommands(){
+        return commands;
+    }
+
+    public List<String> getCommandNames(){
+        List<String> list = new ArrayList<>();
+        commands.forEach((name, command) -> {
+            list.add(name);
+        });
+
+        return list;
     }
 
 }

@@ -1,6 +1,8 @@
 package com.erezbiox1.Command.Commands;
 
 import com.erezbiox1.Command.Command;
+import com.erezbiox1.Command.CommandManager;
+import com.erezbiox1.Core.Main;
 import com.erezbiox1.Utils;
 import com.samczsun.skype4j.chat.Chat;
 import com.samczsun.skype4j.participants.Participant;
@@ -15,16 +17,18 @@ public class helpCommand extends Command {
         super("help");
     }
 
+    static String help = "~~~~~~~~~~~\nBioBot V2.0 By erezbiox1\n~~~~~~~~~~~\n";
+
+    public static void init(CommandManager manager){
+        manager.getCommandNames().forEach((name) -> {
+            help += Main.commandMark + name + "\n";
+        });
+
+        help += "~~~~~~~~~~~";
+    }
+
     @Override
     public void onCommand(Participant sender, Command command, String Label, String[] args) {
-        Utils.sendMessage("~~~~~~~~~~~");
-        Utils.sendMessage("BioBot V1.0 By erezbiox1");
-        Utils.sendMessage("~~~~~~~~~~~");
-        Utils.sendMessage("!login");
-        Utils.sendMessage("!ping");
-        Utils.sendMessage("!credit");
-        Utils.sendMessage("!banana");
-        Utils.sendMessage("!stop");
-        Utils.sendMessage("~~~~~~~~~~~");
+        Utils.sendMessage(help);
     }
 }

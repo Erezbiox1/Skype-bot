@@ -23,7 +23,8 @@ public class Commands {
                     new pingCommand(),
                     new bananaCommand(),
                     new loginCommand(),
-                    new echoCommand()
+                    new echoCommand(),
+                    new adminsCommand()
             )
     );
 
